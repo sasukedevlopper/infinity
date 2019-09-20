@@ -70,7 +70,7 @@ client.on('ready', function(){
             j = -1;
         }
         i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/SasukeGaming03`);
+        client.user.setGame(setGame[i],`http://www.twitch.tv/KiNg66S`);
     }, ms);100000
 
 });
@@ -229,6 +229,7 @@ if (message.content.startsWith("kick")) {
 });
 client.on('message', message => {
 if (message.content.startsWith("ban")) {
+if(msg.member.hasPermission("MANAGE_MESSAGES")) {
     var mention = message.mentions.members.first();
     if(!mention) return message.channel.send("يجب منشن العضو");
 
@@ -499,4 +500,4 @@ client.on("guildCreate", guild => {
   client.channels.get("543900182966829057").send(embed)
 });
 
-client.login(process.env.BOT_TOKEN)
+client.login(process.env.BOT_TOKEN);
