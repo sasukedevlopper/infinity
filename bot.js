@@ -70,7 +70,7 @@ client.on('ready', function(){
             j = -1;
         }
         i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/KiNg66S`);
+        client.user.setGame(setGame[i],`http://www.twitch.tv/SasukeGaming03`);
     }, ms);100000
 
 });
@@ -81,13 +81,13 @@ client.on("message", message => {
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**
          ------------------------------
-         !bc1 : برودكاست لجميع اعضاء السيرفر بايمبد
-         !bc2 : برودكاست لجميع اعضاء السيرفر بدون ايمبد
-         !bc3 : برودكاست للاعضاء  الاونلاين فقط
+         _bc1 : برودكاست لجميع اعضاء السيرفر بايمبد
+         _bc2 : برودكاست لجميع اعضاء السيرفر بدون ايمبد
+         _bc3 : برودكاست للاعضاء  الاونلاين فقط
          ------------------------------
-         !id : عرض ملفك الشخصي
-         !ask : البوت يسئلك اسئلة
-         !server : احصائيات السيرفر
+         _id : عرض ملفك الشخصي
+         _ask : البوت يسئلك اسئلة
+         _server : احصائيات السيرفر
          ------------------------------
          _ban : حظر العضو من السيرفر
          _kick : طرد العضو من السيرفر
@@ -98,9 +98,11 @@ client.on("message", message => {
          ------------------------------
          _guilds : عدد سيرفر البوت
          _help : عرض هذه الرسالة
-         ------------------------------
-         Created By Infinity Company ☕
 
+         ------------------------------
+        
+         | Infinity Company ☕ |
+         ------------------------------
          
        **  `)
    message.author.sendEmbed(embed)
@@ -229,7 +231,6 @@ if (message.content.startsWith("kick")) {
 });
 client.on('message', message => {
 if (message.content.startsWith("ban")) {
-if(msg.member.hasPermission("MANAGE_MESSAGES")) {
     var mention = message.mentions.members.first();
     if(!mention) return message.channel.send("يجب منشن العضو");
 
@@ -500,4 +501,4 @@ client.on("guildCreate", guild => {
   client.channels.get("543900182966829057").send(embed)
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login('NjI0Njk5MDU5Nzg5MzY1Mjc0.XYU3dQ.GOx_1d8-ZLKzMHsAogdhg47ZIj8');
